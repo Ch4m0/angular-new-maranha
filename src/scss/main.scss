@@ -1,0 +1,29 @@
+/* > Naming convention https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md 
+ * Guide: 
+ *    u-utilityName
+ *    ComponentName
+ *    ComponentName--modifierName
+ *    ComponentName-descendentName
+ *    ComponentName.is-stateOfComponent
+ */
+
+//global vars
+@import "partials/variables";
+
+//template
+@import "../../vendor/bootstrap/dist/css/bootstrap";
+@import "../../vendor/adminLTE/AdminLTE";
+@import "../../vendor/adminLTE/_all-skins.min";
+
+//font awesome
+@import "font-awesome/font-awesome";
+
+// utilities
+@import "partials/utils";
+
+// directives 
+/*@import "../js/layouts/helperDirectives";*/
+
+//login component
+/*@import "../js/auth/login";*/
+
