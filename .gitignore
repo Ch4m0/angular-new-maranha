@@ -5,6 +5,7 @@ coverage/
 .idea/
 .tmp/
 dist/
-vendor/
-.swp
-.swo
+vendor/*
+!vendor/adminLTE/*
+*.swp
+*.swo

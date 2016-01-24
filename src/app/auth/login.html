@@ -1,0 +1,44 @@
+<!-- Site wrapper -->
+<div class="login-box">
+  <div class="login-logo">
+    <!--<div class="image">-->
+      <!--<img src="/assets/img/sayco_logo.png" width="150px" class="img-circle" alt="SAYCO logo">-->
+    <!--</div>-->
+    <a href="/login">Angular new Maraña</a>
+  </div><!-- /.login-logo -->
+  <div class="login-box-body">
+    <form ng-submit="login()">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" ng-model="user.username" placeholder="Nombre de usuario">
+        <span class="fa fa-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" ng-model="user.password" placeholder="Contraseña">
+        <span class="fa fa-lock form-control-feedback"></span>
+      </div>
+      <div ng-if="errors" class="row">
+          <ul class="no-uldots">
+            <li ng-repeat="error in errors" class="has-error">
+              <label class="control-label" for="inputError">
+                <i class="fa fa-times-circle-o"></i> {{ error }} 
+              </label>
+            </li>
+          </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" ng-disabled="busy" class="btn btn-primary btn-block btn-flat">
+            <span ng-hide="busy">Entrar</span> 
+            <span ng-show="busy"><i class="fa fa-spin fa-spinner"></i></span>
+          </button>
+        </div><!-- /.col -->
+        <div class="col-sm-12 padding-top-m text-right">
+          <a href="/remember-password">Olvide mi contraseña</a>
+        </div>
+      </div>
+    </form>
+
+
+
+  </div><!-- /.login-box-body -->
+</div><!-- /.login-box -->

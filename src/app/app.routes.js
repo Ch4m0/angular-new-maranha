@@ -8,13 +8,25 @@
     'use strict';
 
     $routeProvider
+    .when("/login", {
+      controller: "LoginCtrl",
+      templateUrl: "app/auth/login.html"
+    })
     .when("/", {
       controller: "HomeCtrl",
       templateUrl: "app/home/home.html"
     })
-    .when("/users", {
+    .when("/usuarios", {
       controller: "UsersCtrl",
       templateUrl: "app/users/users.html"
+    })
+    .when("/usuarios/:id", {
+      controller: "UserDetailCtrl",
+      templateUrl: "app/users/users-detail.html"
+    })
+    .when("/perfil", {
+      controller: "ProfileCtrl",
+      templateUrl: "app/users/profile.html"
     })
     .otherwise({
       redirectTo: '/'

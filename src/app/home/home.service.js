@@ -2,7 +2,7 @@
 angular.module('app.home', [])
 
 .service('HomeService', ['$http', 'CONFIG', function($http,  CONFIG){
-    var url = CONFIG.url+'home/';
+    var url = CONFIG.API_URL+'home/';
 
     this.handleError = function(res){
       console.warn(res);

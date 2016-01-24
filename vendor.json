@@ -4,5 +4,7 @@
     "vendor/angular-route/angular-route.min.js",
     "vendor/angular-bindonce/bindonce.min.js",
     "vendor/bootstrap/dist/js/bootstrap.min.js",
-    "vendor/adminLTE/AdminLTE.js"
+    "vendor/adminLTE/AdminLTE.js",
+    "vendor/angular-loading-bar/build/loading-bar.min.js",
+    "vendor/angular-xeditable/dist/js/xeditable.min.js"
 ]
