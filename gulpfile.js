@@ -14,6 +14,7 @@ var minifyHtml = require('gulp-minify-html');
 var angularFilesort = require('gulp-angular-filesort');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
+var babel = require("gulp-babel");
 var connect = require('gulp-connect');
 
 var bowerConf = {
@@ -49,7 +50,6 @@ gulp.task('sass', function(done) {
   //.pipe(cache('css'))
   .pipe(sourcemaps.init({loadMaps: true}))
   .pipe(sass())
-  //.pipe(sourcemaps.write('./maps'))
   .pipe(minifyCss({
     keepSpecialComments: 0
   }))
@@ -69,7 +69,6 @@ gulp.task('vendor', function(done) {
   var vendorFiles = require('./vendor.json');
 
   gulp.src(vendorFiles)
-  //.pipe(cache('vendor'))
   .pipe(sourcemaps.init({loadMaps: true}))
   .pipe(concat('vendor.js'))
   .pipe(uglify())
@@ -82,13 +81,11 @@ gulp.task('vendor', function(done) {
 
 gulp.task('js', function(done) {
   gulp.src(['./src/app/**/**/*.js'])
-  //.pipe(cache('bundle'))
+  .pipe(babel())
   .pipe(angularFilesort())
   .pipe(concat('bundle.js'))
   .pipe(sourcemaps.init({loadMaps: true}))
   .pipe(ngAnnotate())
-  //.pipe(sourcemaps.write('./maps'))
-  //.pipe(gulp.dest('./www/js/'))
   .pipe(uglify())
   .pipe(rename({ extname: '.min.js' }))
   .pipe(sourcemaps.write('../maps'))
@@ -156,12 +153,21 @@ gulp.task('watch', function() {
 });
 
 gulp.task('serve', function() {
-    connect.server({
-      root: 'public',
-      port: 3000,
-      host: 'localhost',
-      fallback: 'public/index.html'
-    });
+  /* uncoment for activate watch 
+   *gulp.watch(paths.sass, ['sass']);
+   *gulp.watch(paths.js, ['js']);
+   *gulp.watch(paths.vendor, ['vendor']);
+   *gulp.watch(paths.templates, ['templates']);
+   *gulp.watch(paths.img, ['images']);
+   */
+
+  connect.server({
+    root: 'public',
+    port: 3000,
+    host: 'localhost',
+    livereload: true,
+    fallback: 'public/index.html'
+  });
 });
 
 

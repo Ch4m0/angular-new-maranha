@@ -1,5 +1,5 @@
 {
-  "name": "new maranha",
+  "name": "new-maranha",
   "private": "true",
   "dependencies": {
     "angular-bindonce": "~0.3.3",
