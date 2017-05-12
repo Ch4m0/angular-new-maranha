@@ -6,7 +6,7 @@ angular.module('app.auth')
       request: function(config){
         var token = Session.getToken();
         if (token){
-          config.headers.Authorization = 'Token ' + token;
+          config.headers.Authorization = 'Bearer' + token;
         }
         return config;
       },

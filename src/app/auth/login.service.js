@@ -24,7 +24,7 @@ angular.module('app.auth')
         url    : CONFIG.API_URL+'users/me/',
         headers: {
           'Content-Type' : 'application/x-www-form-urlencoded; charset=utf-8',
-          'Authorization': 'Token ' + token 
+          'Authorization': 'Bearer ' + token 
         }
       };
 

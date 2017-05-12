@@ -35,7 +35,7 @@ var paths = {
   sass: ['./src/**/**/*.scss'],
   js: ['./src/app/**/**/*.js'],
   templates: ['./src/**/**/*.html'],
-  vendor: ['./vendor/**/*.js'],
+  vendor: ['./node_modules/**/*.js'],
   img : ['./src/assets/img/*']
 };
 
@@ -153,13 +153,12 @@ gulp.task('watch', function() {
 });
 
 gulp.task('serve', function() {
-  /* uncoment for activate watch 
-   *gulp.watch(paths.sass, ['sass']);
-   *gulp.watch(paths.js, ['js']);
-   *gulp.watch(paths.vendor, ['vendor']);
-   *gulp.watch(paths.templates, ['templates']);
-   *gulp.watch(paths.img, ['images']);
-   */
+   gulp.watch(paths.sass, ['sass']);
+   gulp.watch(paths.js, ['js']);
+   gulp.watch(paths.vendor, ['vendor']);
+   gulp.watch(paths.templates, ['templates']);
+   gulp.watch(paths.img, ['images']);
+   
 
   connect.server({
     root: 'public',

@@ -1,10 +1,10 @@
 [
-    "vendor/jquery/dist/jquery.min.js",
-    "vendor/angular/angular.min.js",
-    "vendor/angular-route/angular-route.min.js",
-    "vendor/angular-bindonce/bindonce.min.js",
-    "vendor/bootstrap/dist/js/bootstrap.min.js",
-    "vendor/adminLTE/AdminLTE.js",
-    "vendor/angular-loading-bar/build/loading-bar.min.js",
-    "vendor/angular-xeditable/dist/js/xeditable.min.js"
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/angular/angular.min.js",
+    "node_modules/angular-route/angular-route.min.js",
+    "node_modules/angular-bindonce/bindonce.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js",
+    "node_modules/adminLTE/AdminLTE.js",
+    "node_modules/angular-loading-bar/build/loading-bar.min.js",
+    "node_modules/angular-xeditable/dist/js/xeditable.min.js"
 ]
